@@ -2230,3 +2230,36 @@
 2024-02-24 18:33:20 -  - exec CUpdateClient::GetHTTPPage
 2024-02-24 18:33:21 -  - TIME GetUpdatesList(request) 0.272 sec
 2024-02-24 18:33:21 -  - exec CUpdateClient::ParseServerData
+2024-02-24 21:43:36 -  - exec CUpdateClient::GetUpdatesList
+2024-02-24 21:43:36 -  - exec CUpdateClient::CollectRequestData
+2024-02-24 21:43:36 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=23.900.0&VERSION=23.900.560&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=sites&SERVER_NAME=&CHHB=sites&CSAB=127.0.0.1&SUID=41ta86xicjzjoj5fjytlbbsqzhbhqvue&CANGZIP=Y&CLIENT_PHPVER=8.2.15&stable=Y&mbfo=0&NGINX=Y&SMD=N&rerere=Y&bitm_main=23.900.560&bitm_bitrixcloud=23.0.0&bitm_fileman=23.200.0&bitm_messageservice=24.0.0&bitm_ui=23.550.0&bitm_highloadblock=23.0.100&bitm_search=22.100.0&bitm_socialservices=23.0.200&bitm_landing=23.1300.200&bitm_b24connector=22.0.0&bitm_security=23.200.0&bitm_iblock=23.300.200&bitm_translate=23.400.0&bitm_location=23.200.0&bitm_rest=23.200.300&bitm_clouds=23.100.0&bitm_perfmon=23.100.0&bitm_seo=23.500.0&bitl_en=&bitl_ru=&SUPD_SRS=RU&SUPD_CMP=N&SALE_15=Y&LICENSE_SIGNED=%7Enew_license18_0_sign-Y
+2024-02-24 21:43:36 -  - exec CUpdateClient::GetHTTPPage
+2024-02-24 21:43:37 -  - TIME GetUpdatesList(request) 0.439 sec
+2024-02-24 21:43:37 -  - exec CUpdateClient::ParseServerData
+2024-02-24 21:43:37 -  - exec CUpdateClient::executeCounters
+2024-02-24 21:43:37 -  - exec CUpdateClient::CollectRequestData
+2024-02-24 21:43:37 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=23.900.0&VERSION=23.900.560&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=sites&SERVER_NAME=&CHHB=sites&CSAB=127.0.0.1&SUID=41ta86xicjzjoj5fjytlbbsqzhbhqvue&CANGZIP=Y&CLIENT_PHPVER=8.2.15&stable=Y&mbfo=0&NGINX=Y&SMD=N&rerere=Y&bitm_main=23.900.560&bitm_bitrixcloud=23.0.0&bitm_fileman=23.200.0&bitm_messageservice=24.0.0&bitm_ui=23.550.0&bitm_highloadblock=23.0.100&bitm_search=22.100.0&bitm_socialservices=23.0.200&bitm_landing=23.1300.200&bitm_b24connector=22.0.0&bitm_security=23.200.0&bitm_iblock=23.300.200&bitm_translate=23.400.0&bitm_location=23.200.0&bitm_rest=23.200.300&bitm_clouds=23.100.0&bitm_perfmon=23.100.0&bitm_seo=23.500.0&bitl_en=&bitl_ru=&SUPD_SRS=RU&SUPD_CMP=N&SALE_15=Y&LICENSE_SIGNED=%7Enew_license18_0_sign-Y&query_type=counter&cntr_result[436]=X
+2024-02-24 21:43:37 -  - exec CUpdateClient::GetHTTPPage
+2024-02-24 21:43:37 -  - TIME executeCounters 0.238 sec
+2024-02-24 21:46:58 -  - exec CUpdateClient::GetUpdatesList
+2024-02-24 21:46:58 -  - exec CUpdateClient::CollectRequestData
+2024-02-24 21:46:58 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=23.900.0&VERSION=23.900.560&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=sites&SERVER_NAME=&CHHB=sites&CSAB=127.0.0.1&SUID=41ta86xicjzjoj5fjytlbbsqzhbhqvue&CANGZIP=Y&CLIENT_PHPVER=8.2.15&stable=Y&mbfo=0&NGINX=Y&SMD=N&rerere=Y&bitm_main=23.900.560&bitm_bitrixcloud=23.0.0&bitm_fileman=23.200.0&bitm_messageservice=24.0.0&bitm_ui=23.550.0&bitm_highloadblock=23.0.100&bitm_search=22.100.0&bitm_socialservices=23.0.200&bitm_landing=23.1300.200&bitm_b24connector=22.0.0&bitm_security=23.200.0&bitm_iblock=23.300.200&bitm_translate=23.400.0&bitm_location=23.200.0&bitm_rest=23.200.300&bitm_clouds=23.100.0&bitm_perfmon=23.100.0&bitm_seo=23.500.0&bitl_en=&bitl_ru=&SUPD_SRS=RU&SUPD_CMP=N&SALE_15=Y&LICENSE_SIGNED=%7Enew_license18_0_sign-Y
+2024-02-24 21:46:58 -  - exec CUpdateClient::GetHTTPPage
+2024-02-24 21:46:58 -  - TIME GetUpdatesList(request) 0.227 sec
+2024-02-24 21:46:58 -  - exec CUpdateClient::ParseServerData
+2024-02-24 21:46:58 -  - exec CUpdateClient::executeCounters
+2024-02-24 21:46:58 -  - exec CUpdateClient::CollectRequestData
+2024-02-24 21:46:58 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=23.900.0&VERSION=23.900.560&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=sites&SERVER_NAME=&CHHB=sites&CSAB=127.0.0.1&SUID=41ta86xicjzjoj5fjytlbbsqzhbhqvue&CANGZIP=Y&CLIENT_PHPVER=8.2.15&stable=Y&mbfo=0&NGINX=Y&SMD=N&rerere=Y&bitm_main=23.900.560&bitm_bitrixcloud=23.0.0&bitm_fileman=23.200.0&bitm_messageservice=24.0.0&bitm_ui=23.550.0&bitm_highloadblock=23.0.100&bitm_search=22.100.0&bitm_socialservices=23.0.200&bitm_landing=23.1300.200&bitm_b24connector=22.0.0&bitm_security=23.200.0&bitm_iblock=23.300.200&bitm_translate=23.400.0&bitm_location=23.200.0&bitm_rest=23.200.300&bitm_clouds=23.100.0&bitm_perfmon=23.100.0&bitm_seo=23.500.0&bitl_en=&bitl_ru=&SUPD_SRS=RU&SUPD_CMP=N&SALE_15=Y&LICENSE_SIGNED=%7Enew_license18_0_sign-Y&query_type=counter&cntr_result[438]=X
+2024-02-24 21:46:58 -  - exec CUpdateClient::GetHTTPPage
+2024-02-24 21:46:58 -  - TIME executeCounters 0.196 sec
+2024-02-25 08:05:34 -  - exec CUpdateClient::GetUpdatesList
+2024-02-25 08:05:34 -  - exec CUpdateClient::CollectRequestData
+2024-02-25 08:05:34 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=23.900.0&VERSION=23.900.560&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=sites&SERVER_NAME=&CHHB=sites&CSAB=127.0.0.1&SUID=41ta86xicjzjoj5fjytlbbsqzhbhqvue&CANGZIP=Y&CLIENT_PHPVER=8.2.15&stable=Y&mbfo=0&NGINX=Y&SMD=N&rerere=Y&bitm_main=23.900.560&bitm_bitrixcloud=23.0.0&bitm_fileman=23.200.0&bitm_messageservice=24.0.0&bitm_ui=23.550.0&bitm_highloadblock=23.0.100&bitm_search=22.100.0&bitm_socialservices=23.0.200&bitm_landing=23.1300.200&bitm_b24connector=22.0.0&bitm_security=23.200.0&bitm_iblock=23.300.200&bitm_translate=23.400.0&bitm_location=23.200.0&bitm_rest=23.200.300&bitm_clouds=23.100.0&bitm_perfmon=23.100.0&bitm_seo=23.500.0&bitl_en=&bitl_ru=&SUPD_SRS=RU&SUPD_CMP=N&SALE_15=Y&LICENSE_SIGNED=%7Enew_license18_0_sign-Y
+2024-02-25 08:05:34 -  - exec CUpdateClient::GetHTTPPage
+2024-02-25 08:05:34 -  - TIME GetUpdatesList(request) 0.277 sec
+2024-02-25 08:05:34 -  - exec CUpdateClient::ParseServerData
+2024-02-25 08:05:34 -  - exec CUpdateClient::executeCounters
+2024-02-25 08:05:34 -  - exec CUpdateClient::CollectRequestData
+2024-02-25 08:05:34 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=23.900.0&VERSION=23.900.560&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=sites&SERVER_NAME=&CHHB=sites&CSAB=127.0.0.1&SUID=41ta86xicjzjoj5fjytlbbsqzhbhqvue&CANGZIP=Y&CLIENT_PHPVER=8.2.15&stable=Y&mbfo=0&NGINX=Y&SMD=N&rerere=Y&bitm_main=23.900.560&bitm_bitrixcloud=23.0.0&bitm_fileman=23.200.0&bitm_messageservice=24.0.0&bitm_ui=23.550.0&bitm_highloadblock=23.0.100&bitm_search=22.100.0&bitm_socialservices=23.0.200&bitm_landing=23.1300.200&bitm_b24connector=22.0.0&bitm_security=23.200.0&bitm_iblock=23.300.200&bitm_translate=23.400.0&bitm_location=23.200.0&bitm_rest=23.200.300&bitm_clouds=23.100.0&bitm_perfmon=23.100.0&bitm_seo=23.500.0&bitl_en=&bitl_ru=&SUPD_SRS=RU&SUPD_CMP=N&SALE_15=Y&LICENSE_SIGNED=%7Enew_license18_0_sign-Y&query_type=counter&cntr_result[440]=X&cntr_result[442]=
+2024-02-25 08:05:34 -  - exec CUpdateClient::GetHTTPPage
+2024-02-25 08:05:34 -  - TIME executeCounters 0.152 sec

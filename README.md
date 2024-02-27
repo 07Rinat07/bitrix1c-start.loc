@@ -132,3 +132,26 @@ sudo nano /etc/apache2/sites-available/linuxtechgeek.info.conf
 ### Дополнительная информация по установки битрикса удаленно
 #### Установка «1С-Битрикс: Управление сайтом» на удаленный сервер возможна посредством загрузки дистрибутива по протоколу FTP или с помощью скрипта BitrixSetup.
 * https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=32&LESSON_ID=4891
+
+### Решение проблем с ошибками после установки битрикс и проверки на ошибки:
+* Ошибка! innodb_strict_mode=ON, требуется OFF
+* Частая ошибка в режиме работы MySQL на сайтах под управлением 1С-Битрикс. В модуле main версии 19.0.400 добавилась новая проверка innodb_strict_mode. Параметр innodb_strict_mode задаёт режим работы MySQL.
+* Решение проблемы с innodb_strict_mode
+* Открываем в левом меню админа битрикса (или в редакторе PhpStorm откр этот файлик) "Контент" => "Структура сайта" => "Файлы и папки".
+  Переходим в директорию: /bitrix/php_interface/
+  Открываем файл: after_connect_d7.php в режиме редактирования PHP кода.
+  Вставляем строку: $connection->queryExecute("SET innodb_strict_mode=0");
+  Сохраняем
+
+0. Полный конфиг файла after_connect_d7.php --->
+1. $this->queryExecute("SET NAMES 'utf8'");
+2. $this->queryExecute("SET sql_mode=''");
+3. $this->queryExecute('SET collation_connection = "utf8_unicode_ci"');
+4. $this->queryExecute("SET innodb_strict_mode=0"); // пофиксил
+5. $this->Query("SET LOCAL time_zone='".date('P')."'");   // пофиксил
+
+* Второй вариант
+  Если первый вариант не помог, значит необходимо внести правку в настройках MySQL. Для 1С-Bitrix окружения в файле /etc/mysql/conf.d/z_bx_custom.cnf добавить innodb_strict_mode = OFF
+1. [mysqld]
+   innodb_strict_mode = OFF
+2. service mysqld restart  (в терминале набрать команду для перезапуска Mysql)

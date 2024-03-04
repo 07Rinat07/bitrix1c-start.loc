@@ -106,32 +106,21 @@ $bIsMainPage = $APPLICATION->GetCurPage(false) == SITE_DIR;
         </div>
     </header>
     </header>
-    <nav>
-        <div class="navbar navbar-intervolga">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-nav">
-                        <span class="sr-only">Переключить навигацию</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/">InterVolga.ru</a>
-                </div>
-                <div class="collapse navbar-collapse" id="top-nav">
-                    <ul class="nav navbar-nav">
-                        <li><a href="/">Главная страница</a></li>
-                        <li><a href="#">Каталог товаров</a></li>
-                        <li><a href="#">Новости компании</a></li>
-                        <li><a href="#">Гарантия</a></li>
-                        <li><a href="#">Доставка</a></li>
-                        <li><a href="#">Дилерам</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <?$APPLICATION->IncludeComponent("bitrix:menu", "menu", Array(
+        "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
+        "CHILD_MENU_TYPE" => "left",    // Тип меню для остальных уровней
+        "DELAY" => "N", // Откладывать выполнение шаблона меню
+        "MAX_LEVEL" => "1", // Уровень вложенности меню
+        "MENU_CACHE_GET_VARS" => "",    // Значимые переменные запроса
+        "MENU_CACHE_TIME" => "3600",    // Время кеширования (сек.)
+        "MENU_CACHE_TYPE" => "N",   // Тип кеширования
+        "MENU_CACHE_USE_GROUPS" => "Y", // Учитывать права доступа
+        "ROOT_MENU_TYPE" => "top",  // Тип меню для первого уровня
+        "USE_EXT" => "N",   // Подключать файлы с именами вида .тип_меню.menu_ext.php
+        "COMPONENT_TEMPLATE" => ".default"
+    ),
+        false
+    );?>
 
     <? if ($bIsMainPage) : ?>
         <div class="slider-responsive">

@@ -317,13 +317,19 @@ $bIsMainPage = $APPLICATION->GetCurPage(false) == SITE_DIR;
     <? endif; ?>
 
     <div class="container">
-        <? if (!$bIsMainPage) : ?>
-            <ol class="breadcrumb">
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Раздел</a></li>
-                <li class="active">Детальная страница</li>
-            </ol>
-        <? endif; ?>
+        <?if (!$bIsMainPage):?>
+            <?$APPLICATION->IncludeComponent(
+	"bitrix:breadcrumb", 
+	"breadcrumb", 
+	array(
+		"COMPONENT_TEMPLATE" => "breadcrumb",
+		"PATH" => "",
+		"SITE_ID" => "s1",
+		"START_FROM" => "0"
+	),
+	false
+);?>
+        <?endif;?>
         <h1><? $APPLICATION->ShowTitle(false) ?></h1>
     </div>
     <div class="container">

@@ -1,5 +1,8 @@
 <?php
-return array (
+
+use Bitrix\Main\DB\MysqliConnection;
+
+return array (
   'utf_mode' => 
   array (
     'value' => true,
@@ -27,13 +30,19 @@
   array (
     'value' => 
     array (
-      'debug' => false,
+      'debug' => true,
       'handled_errors_types' => 4437,
       'exception_errors_types' => 4437,
       'ignore_silence' => false,
       'assertion_throws_exception' => true,
       'assertion_error_type' => 256,
-      'log' => NULL,
+      'log' => array(
+          'settings' =>
+              array(
+                  'file' => '/home/bitrix/__php_error.log',
+                  'log_size' => 1000000,
+              ),
+      ),
     ),
     'readonly' => false,
   ),
@@ -43,7 +52,7 @@
     array (
       'default' => 
       array (
-        'className' => '\\Bitrix\\Main\\DB\\MysqliConnection',
+        'className' => MysqliConnection::class,
         'host' => 'localhost',
         'database' => 'bitrix1c',
         'login' => 'dev',

@@ -2,8 +2,13 @@
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
     die();
 ?>
+    </div>
+<?if(defined("ERROR_404") && ERROR_404 === "Y"):?>
 
+    </div>
+<?else:?>
 <div class="sticky-push"></div>
+<?endif;?>
 </div>
 
 <footer>

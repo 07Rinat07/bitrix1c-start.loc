@@ -1,7 +1,7 @@
-<?
+<?php
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetTitle("Test");
-?><?$APPLICATION->IncludeComponent(
+?><?php $APPLICATION->IncludeComponent(
 	"bitrix:breadcrumb",
 	"breadcrumb",
 	Array(
@@ -10,6 +10,6 @@ $APPLICATION->SetTitle("Test");
 		"SITE_ID" => "s1",
 		"START_FROM" => "0"
 	)
-);?><?
+);?><?php
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');
 ?>

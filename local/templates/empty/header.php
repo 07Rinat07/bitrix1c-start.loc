@@ -1,4 +1,4 @@
-<?
+<?php
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
     die();
 
@@ -16,10 +16,10 @@ $bIsMainPage = $APPLICATION->GetCurPage(false) == SITE_DIR;
     <!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><? $APPLICATION->ShowTitle(); ?></title>
-    <? $APPLICATION->ShowHead(); ?>
+    <title><?php $APPLICATION->ShowTitle(); ?></title>
+    <?php $APPLICATION->ShowHead(); ?>
 
-    <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/common-styles.css") ?>
+    <?php $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/common-styles.css") ?>
     <link rel="icon" href="<?= SITE_TEMPLATE_PATH ?>/ico/favicon_bx.png">
 
     <!--[if lt IE 9]>
@@ -28,7 +28,7 @@ $bIsMainPage = $APPLICATION->GetCurPage(false) == SITE_DIR;
     <!--[if gte IE 9]><!-->
     <script src="<?= CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH . '/js/vendor/modernizr.min.js'); ?>"></script>
     <!--<![endif]-->
-    <?
+    <?php
     $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/vendor/jquery.min.js');
     $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/vendor/bootstrap/collapse.js');
     $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/vendor/bootstrap/tooltip.js');
@@ -45,33 +45,33 @@ $bIsMainPage = $APPLICATION->GetCurPage(false) == SITE_DIR;
     Frame</a> чтобы улучшить взаимодействие с сайтом.</p>
 <![endif]-->
 
-<? $APPLICATION->ShowPanel(); ?>
+<?php $APPLICATION->ShowPanel(); ?>
 <div class="sticky-wrap">
     <header>
         <div class="header-main">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-xs-12">
-                        <? if ($bIsMainPage): ?>
+                        <?php if ($bIsMainPage): ?>
                         <span class="logo">
-						<? else: ?>
+						<?php else: ?>
 						<a class="logo" href="/">
-						<? endif; ?>
+						<?php endif; ?>
 							<div class="image">Одежда</div>
 							<div id="slogan-rand" class="slogan">
 								<noscript>Лучшая одежда</noscript>
 							</div>
-						<? if ($bIsMainPage): ?>
+						<?php if ($bIsMainPage): ?>
 						</span>
-                    <? else: ?>
+                    <?php else: ?>
                         </a>
-                    <? endif; ?>
+                    <?php endif; ?>
                     </div>
                     <div class="col-sm-6 col-xs-12">
                         <div class="row">
                             <div class="col-lg-7 col-xs-12 hidden-xs">
                                 <ul class="btn-list-inline">
-                                    <? $APPLICATION->IncludeFile(
+                                    <?php $APPLICATION->IncludeFile(
                                         SITE_DIR . "include/slogan.php",
                                         array(),
                                         array("MODE" => "text")
@@ -87,14 +87,14 @@ $bIsMainPage = $APPLICATION->GetCurPage(false) == SITE_DIR;
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <ul class="phone-list">
-                            <li><? $APPLICATION->IncludeFile(
+                            <li><?php $APPLICATION->IncludeFile(
                                     SITE_DIR . "include/phone1.php",
                                     array(),
                                     array(
                                         "MODE" => "html"
                                     )
                                 ); ?></li>
-                            <li><? $APPLICATION->IncludeFile(
+                            <li><?php $APPLICATION->IncludeFile(
                                     SITE_DIR . "include/phone2.php",
                                     array(),
                                     array("MODE" => "html")
@@ -105,8 +105,7 @@ $bIsMainPage = $APPLICATION->GetCurPage(false) == SITE_DIR;
             </div>
         </div>
     </header>
-    </header>
-    <?$APPLICATION->IncludeComponent("bitrix:menu", "menu", Array(
+    <?php $APPLICATION->IncludeComponent("bitrix:menu", "menu", Array(
         "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
         "CHILD_MENU_TYPE" => "left",    // Тип меню для остальных уровней
         "DELAY" => "N", // Откладывать выполнение шаблона меню
@@ -122,7 +121,7 @@ $bIsMainPage = $APPLICATION->GetCurPage(false) == SITE_DIR;
         false
     );?>
 
-    <? if ($bIsMainPage) : ?>
+    <?php if ($bIsMainPage) : ?>
         <div class="slider-responsive">
             <div class="slider-responsive-panel">
                 <input data-toggle="radio-switch" type="checkbox">
@@ -314,23 +313,26 @@ $bIsMainPage = $APPLICATION->GetCurPage(false) == SITE_DIR;
             </div>
         </div>
 
-    <? endif; ?>
+    <?php endif; ?>
 
-    <div class="container">
-        <?if (!$bIsMainPage):?>
-            <?$APPLICATION->IncludeComponent(
-	"bitrix:breadcrumb", 
-	"breadcrumb", 
-	array(
-		"COMPONENT_TEMPLATE" => "breadcrumb",
-		"PATH" => "",
-		"SITE_ID" => "s1",
-		"START_FROM" => "0"
-	),
-	false
-);?>
-        <?endif;?>
-        <h1><? $APPLICATION->ShowTitle(false) ?></h1>
-    </div>
-    <div class="container">
+
+    <?php if(defined("ERROR_404") && ERROR_404 === "Y"):?>
+
+    <div class="page-not-found">
+        <?php else:?>
+            <div class="container">
+                <?php if (!$bIsMainPage):?>
+                    <?php $APPLICATION->IncludeComponent("bitrix:breadcrumb", "template", Array(
+                        "COMPONENT_TEMPLATE" => ".default",
+                        "PATH" => "",	// Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
+                        "SITE_ID" => "-",	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
+                        "START_FROM" => "0",	// Номер пункта, начиная с которого будет построена навигационная цепочка
+                    ),
+                        false
+                    );?>
+                <?php endif;?>
+                <h1><?php $APPLICATION->ShowTitle(false)?></h1>
+            </div>
+        <?php endif;?>
+        <div class="container">
 						

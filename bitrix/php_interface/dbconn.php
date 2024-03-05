@@ -1,7 +1,7 @@
 <?php
 define("BX_USE_MYSQLI", true);
-$DBDebug = false;
-$DBDebugToFile = false;
+$DBDebug = true;
+$DBDebugToFile = true;
 
 define("CACHED_b_file", 3600);
 define("CACHED_b_file_bucket_size", 10);
@@ -13,8 +13,8 @@ define("CACHED_b_event", 3600);
 define("CACHED_b_agent", 3660);
 define("CACHED_menu", 3600);
 
-define("BX_FILE_PERMISSIONS", 0755);
-define("BX_DIR_PERMISSIONS", 0755);
+define("BX_FILE_PERMISSIONS", 0777);
+define("BX_DIR_PERMISSIONS", 0777);
 @umask(~(BX_FILE_PERMISSIONS | BX_DIR_PERMISSIONS) & 0777);
 
 @ini_set("memory_limit", "512M");

@@ -19,9 +19,10 @@
 ### Установка демоверсии
 * https://www.1c-bitrix.ru/download/cms.php#tab-subsection-3
 
-##### Материалы:
+##### Материалы и помощь:
 * https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=95&INDEX=Y
-
+* При возникновении различных проблем и ошибок может помочь обращение в форумы:
+  https://dev.1c-bitrix.ru/community/forums/forum32/topic149070/?PAGEN_1=9
 ### Описание курса-проекта
 1. Введение 
 2. Легкое начало 

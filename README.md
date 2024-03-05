@@ -98,6 +98,7 @@ sudo nano /etc/apache2/sites-available/linuxtechgeek.info.conf
 * Теперь ваш виртуальный хост настроен. Убедитесь, что ваше доменное имя зарегистрировано и указывает на IP-адрес вашего сервера. Вы сможете увидеть тестовую HTML-страницу, введя ваш домен в браузере.
 
 ### DOCKER- Install Linux, Nginx, MySQL, PHP (LEMP stack)
+0. https://github.com/awesomebitrix/bitrixdock
 1. https://github.com/07Rinat07/lemp-docker
 2. https://github.com/07Rinat07/Docker-PHP-MYSQL-NGINX-PHPMYADMIN
 * скачать с моего репозитория на гитхаб сборку lemp и развернуть вебокружение

@@ -1,8 +1,8 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001709657398';
-$dateexpire = '001745657398';
-$ser_content = 'a:2:{s:7:"CONTENT";s:5187:"    <div class="slider-responsive">
+$datecreate = '001709712042';
+$dateexpire = '001745712042';
+$ser_content = 'a:2:{s:7:"CONTENT";s:5188:"    <div class="slider-responsive">
         <div class="slider-responsive-panel">
             <input data-toggle="radio-switch" type="checkbox">
             <span>Наши лучшие предложения Вам</span>
@@ -19,7 +19,8 @@ $ser_content = 'a:2:{s:7:"CONTENT";s:5187:"    <div class="slider-responsive">
                             <div class="slider-responsive-inner-item-img-title">
                                 <div class="h2">Одежда для велосипедистов</div>
                                                                     <div>В следующем году наша компания начинает коллекции одежды для велосипедистов. Не пропустите!!!</div>
-                                                                                                    <a href="/" class="link">Подробнее...</a>
+                                                                
+                                    <a href="#" class="link">Подробнее...</a>
                                                             </div>
                         </div>
                     </div>
